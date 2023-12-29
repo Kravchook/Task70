@@ -8,7 +8,7 @@ namespace Task70
         const string Email1 = "testerautomation601@gmail.com";
         const string Password1 = "myINVULNERABLEpass";
 
-        public WebDriver Driver { get; set; }
+        public IWebDriver Driver { get; set; }
 
         [SetUp]
         public void Setup()

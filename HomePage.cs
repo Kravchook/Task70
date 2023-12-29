@@ -3,15 +3,14 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Task70
 {
-    public class HomePage
+    public class HomePage : BasePage
     {
         private const string WelcomeText = "Welcome, Automation Tester";
-        protected WebDriver Driver;
         private By messageBy = By.XPath($"//*[contains(text(), '{WelcomeText}')]");
 
-        public HomePage(WebDriver driver)
+        public HomePage(IWebDriver driver)
         {
-            this.Driver = driver;
+            Driver = driver;
             TakeScreenshot(messageBy);
             
             if (!Driver.Title.Equals("Google Account"))
